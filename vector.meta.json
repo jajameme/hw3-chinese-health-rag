@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-m3",
+  "dimension": 1024,
+  "vectors": 120,
+  "normalized": true,
+  "indexed_field": "summary",
+  "summary_sha256": "0596eea588bcf8b89c8789ca6ff492a634b41a78facec5ac750ee07fab9d5fa7",
+  "index_sha256": "e9e1e6d1e6ec8e4415d668e5a3f8c3c69b15e1bf35d126e99e18942c6125e4a8",
+  "created_at": "2026-10-25T10:31:49+00:00",
+  "device": "cuda"
+}

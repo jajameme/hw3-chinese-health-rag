@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>好好讀・健康新聞小幫手</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="首頁"><span class="brand-icon">＋</span> 好好讀<span class="brand-dot">.</span></a>
+    <p class="sidebar-caption">HEALTH NEWS COMPANION</p>
+    <div class="side-section"><span class="eyebrow">你的閱讀空間</span><div class="active-nav"><span>◉</span> 健康新聞對話</div></div>
+    <div class="library-card"><span class="eyebrow">新聞資料庫</span><div class="count"><span id="article-count">—</span><small>篇新聞</small></div><p>醫療疾病 · 健康保健 · 營養飲食</p><div class="status"><span class="status-dot"></span><span id="db-status">正在確認資料狀態</span></div></div>
+    <div class="sidebar-bottom"><span class="local-badge">● 在本機處理對話</span><p>對話保留在這台電腦。<br>新聞來源：健康醫療網</p><a href="https://www.healthnews.com.tw/" target="_blank" rel="noopener noreferrer">瀏覽新聞網站 ↗</a></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>閱讀健康資訊，也看見它的出處。</span><button id="clear" class="text-button">＋ 新對話</button></header>
+    <section class="intro"><div class="label">用新聞理解健康</div><h1>關於健康，<br>一起<span>讀清楚一點。</span></h1><p>問一個問題，從新聞找到線索。<br>每次回答都保留來源，讓你能回到原文繼續閱讀。</p></section>
+    <section class="suggestions" aria-label="開始提問"><button data-question="最近的新聞對均衡飲食與體重管理有哪些提醒？"><span>01 / 飲食日常</span>怎麼吃，更有依據？ <b>↗</b></button><button data-question="最近的健康新聞提到哪些心血管風險與預防重點？"><span>02 / 健康關心</span>從新聞了解健康風險 <b>↗</b></button><button data-question="幫我從新聞整理改善睡眠與生活習慣的重點。"><span>03 / 好好生活</span>看看日常習慣的影響 <b>↗</b></button></section>
+    <section id="messages" class="messages" aria-live="polite" aria-label="對話內容"></section>
+    <section class="composer-wrap"><form id="chat-form"><div class="retrieval-row"><label class="switch-label"><input id="retrieve" type="checkbox" checked><span class="toggle"></span><span>檢索新聞資料庫</span></label><span id="mode-hint">從新聞找資料，附上來源</span></div><div class="input-row"><label for="question" class="sr-only">輸入問題</label><textarea id="question" rows="2" maxlength="1000" placeholder="想了解什麼健康主題？也可以接著追問…" required></textarea><button id="send" type="submit" aria-label="送出訊息">↑</button></div></form><div class="footnote"><span>健康資訊參考，不能取代醫師診斷。</span><span id="request-status">準備就緒</span></div></section>
+  </main>
+  <script src="{{ url_for('static', filename='chat.js') }}" defer></script>
+</body>
+</html>

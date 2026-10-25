@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "stage": "completed",
+  "started_at": "2026-10-25T09:41:12+00:00",
+  "updated_at": "2026-10-25T12:34:05+00:00",
+  "runner_pid": 24736,
+  "child_pid": null,
+  "model": "gemma4:e2b-it-q4_K_M",
+  "target_articles": 120,
+  "completed_stages": [
+    "install_torch",
+    "install_packages",
+    "runtime",
+    "model_download",
+    "crawl_list",
+    "crawl_articles",
+    "summarize",
+    "make_index",
+    "tests",
+    "evaluate",
+    "web"
+  ],
+  "total_stages": 11,
+  "progress": {},
+  "counts": {
+    "articles": 120,
+    "summaries": 120
+  },
+  "log": "logs/pipeline.log",
+  "app_url": "http://127.0.0.1:5000",
+  "artifacts": {
+    "news.db": "news.db",
+    "vector.index": "vector.index",
+    "vector.meta.json": "vector.meta.json",
+    "results/evaluation.json": "results/evaluation.json",
+    "results/demo.md": "results/demo.md",
+    "images/demo_chat.png": "images/demo_chat.png"
+  },
+  "resumed_at": "2026-10-25T12:31:05+00:00",
+  "resume_from_stage": "evaluate",
+  "exit_code": 0,
+  "completed_at": "2026-10-25T12:34:05+00:00"
+}

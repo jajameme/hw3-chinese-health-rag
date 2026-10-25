@@ -1,0 +1,14 @@
+.venv/
+.cache/
+.tools/
+__pycache__/
+*.pyc
+logs/
+state.json
+progress.json
+*.tmp
+*.lock
+news.db-wal
+news.db-shm
+.env
+.env.*
